@@ -1,8 +1,9 @@
 import { RFValue } from "react-native-responsive-fontsize";
 import styled from "styled-components/native";
 import { Feather } from '@expo/vector-icons';
-import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { GestureHandlerRootView, RectButton } from "react-native-gesture-handler";
 import { FlatList, FlatListProps } from "react-native";
+
 import { Category as CategoryListProps } from './';
 
 interface CategoryProps {
@@ -36,7 +37,7 @@ export const List = styled(
   width: 100%;
 `;
 
-export const Category = styled.TouchableOpacity<CategoryProps>`
+export const Category = styled(RectButton)<CategoryProps>`
   width: 100%;
   padding: ${RFValue(15)}px;
   flex-direction: row;
